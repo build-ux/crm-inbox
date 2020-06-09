@@ -21,6 +21,235 @@
     url("./assets/fonts/poppins/poppins-medium.ttf") format("truetype");
 }
 
+:root {
+  /* Theming */
+
+  /* Colorbook */
+  /* Dark Theme */
+  --main-background-dark: hsl(234, 12%, 23%);
+  --component-background-dark: hsl(234, 12%, 25%);
+  --high-contrast-dark: hsl(234, 0%, 100%);
+  --medium-contrast-dark: hsl(234, 11%, 81%);
+  --elevation-1-background-start-dark: hsl(234, 11%, 36%);
+  --elevation-1-background-end-dark: hsl(234, 11%, 25%);
+  --elevation-1-gradient-dark: linear-gradient(135deg, var(--elevation-1-background-start-dark) 0%, var(--elevation-1-background-end-dark) 100%);
+  --elevation-2-background-start-dark: hsl(234, 11%, 36%);
+  --elevation-2-background-end-dark: hsl(234, 11%, 29%);
+  --elevation-2-gradient-dark: linear-gradient(135deg, var(--elevation-2-background-start-dark) 0%, var(--elevation-2-background-end-dark) 100%);
+  --elevation-2-inset-background-start-dark: hsl(234, 11%, 26%);
+  --elevation-2-inset-background-end-dark: hsl(234, 11%, 19%);
+  --elevation-2-inset-gradient-dark: linear-gradient(135deg, var(--elevation-2-inset-background-start-dark) 0%, var(--elevation-2-inset-background-end-dark) 100%);
+  --component-guide-dark: hsl(234, 12%, 8%);
+  --alert-dark: var(--high-contrast-dark);
+  --highlight-background-dark: hsl(234, 19%, 29%);
+  --highlight-text-dark: hsl(234, 100%, 81%);
+
+  /* Light Theme */
+  --main-background-light: hsl(234, 27%, 98%);
+  --component-background-light: hsl(234, 0%, 100%);
+  --high-contrast-light: hsl(234, 24%, 31%);
+  --medium-contrast-light: hsl(234, 12%, 46%);
+  --elevation-1-background-start-light: hsl(234, 27%, 98%);
+  --elevation-1-background-end-light: hsl(234, 26%, 95%);
+  --elevation-1-gradient-light: linear-gradient(135deg, var(--elevation-1-background-start-light) 0%, var(--elevation-1-background-end-light) 100%);
+  --elevation-2-background-start-light: hsl(0, 0%, 100%);
+  --elevation-2-background-end-light: hsl(234, 26%, 96%);
+  --elevation-2-gradient-light: linear-gradient(135deg, var(--elevation-2-background-start-light) 0%, var(--elevation-2-background-end-light) 100%);
+  --elevation-2-inset-background-start-light: hsl(234, 27%, 94%);
+  --elevation-2-inset-background-end-light: hsl(234, 26%, 91%);
+  --elevation-2-inset-gradient-light: linear-gradient(135deg, var(--elevation-2-inset-background-start-light) 0%, var(--elevation-2-inset-background-end-light) 100%);
+  --component-guide-light: hsl(234, 11%, 77%);
+  --alert-light: var(--accent);
+  --highlight-background-light: var(--elevation-2-background-end-light);
+  --highlight-text-light: var(--medium-contrast-light);
+
+  /* Shared */
+  --accent: hsl(234, 100%, 50%);
+  --accent-background-start: hsl(234, 75%, 63%);
+  --accent-background-end: hsl(234, 72%, 50%);
+  --accent-gradient: linear-gradient(135deg, var(--accent-background-start) 0%, var(--accent-background-end) 100%);
+  --accent-gradient-hover: linear-gradient(135deg, hsl(234, 75%, 53%) 0%, hsl(234, 72%, 40%) 100%);
+  --logo-top: hsl(201, 100%, 71%);
+  --logo-middle: hsl(202, 100%, 50%);
+  --logo-bottom: var(--accent);
+  --notification-gradient: linear-gradient(135deg, hsl(234, 90%, 80%) 0%, var(--accent-background-end) 100%);
+
+
+  /* Drop Shadows */
+  /* Dark Theme */
+  --elevation-1-dark: 0px 4px 16px hsla(234, 12%, 8%, 0.2), 0px 2px 2px hsla(234, 12%, 8%, 0.2);
+  --elevation-2-dark: 0px 4px 32px hsla(234, 12%, 8%, 0.12), 0px 2px 4px hsla(234, 12%, 8%, 0.1);
+  --elevation-3-dark: 0px 24px 128px hsla(234, 12%, 8%, 0.5), 0px 2px 4px hsla(234, 12%, 8%, 0.15);
+  --elevation-tooltip-dark: 0px 4px 16px hsla(234, 12%, 8%, 0.45), 0px 0px 2px hsla(234, 12%, 8%, 0.15);
+  --elevation-accent-dark: 0px 12px 24px hsla(234, 86%, 31%, 0.28), 0px 2px 2px hsla(234, 86%, 31%, 0.25);
+  --elevation-notification-dark: 1px 1px 4px hsla(234, 72%, 20%, 0.4);
+
+  /* Light Theme */
+  --elevation-1-light: 0px 4px 16px hsla(234, 12%, 8%, 0.12), 0px 2px 4px hsla(234, 12%, 8%, 0.1);
+  --elevation-2-light: 0px 4px 16px hsla(234, 12%, 8%, 0.14), 0px 2px 4px hsla(234, 12%, 8%, 0.1);
+  --elevation-3-light: 0px 2px 64px hsla(234, 12%, 8%, 0.2), 0px 2px 16px hsla(234, 12%, 8%, 0.06);
+  --elevation-tooltip-light: 0px 0px 8px hsla(234, 12%, 8%, 0.08), 0px 2px 2px hsla(234, 12%, 8%, 0.06);
+  --elevation-accent-light: 0px 12px 24px hsla(234, 86%, 31%, 0.15), 0px 2px 2px hsla(234, 86%, 31%, 0.2);
+  --elevation-notification-light: 1px 1px 4px hsla(234, 72%, 20%, 0.15);
+
+  /* Typography */
+  --font-family-sans: "Poppins", sans-serif;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  /* Design Elements */
+  --transition: 300ms ease-in-out;
+}
+
+
+/* Reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
 body {
-  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  color: var(--high-contrast);
+}
+
+
+/* Type Specs */
+.t-title-1 {
+  font-size: 1.5rem;
+  font-weight: var(--weight-regular);
+  line-height: 2rem;
+}
+
+.t-title-2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.t-title-3 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.t-body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.t-body-strong {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.t-body-small {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.t-body-micro {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.t-text-input {
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+
+/* Accessibility */
+.visually-hidden {
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  border: 0;
+}
+
+
+/* App */
+.app {
+  /* Colorbook */
+  --main-background: var(--main-background-light);
+  --component-background: var(--component-background-light);
+  --high-contrast: var(--high-contrast-light);
+  --medium-contrast: var(--medium-contrast-light);
+  --elevation-1-background-start: var(--elevation-1-background-start-light);
+  --elevation-1-background-end: var(--elevation-1-background-end-light);
+  --elevation-1-gradient: var(--elevation-1-gradient-light);
+  --elevation-2-background-start: var(--elevation-2-background-start-light);
+  --elevation-2-background-end: var(--elevation-2-background-end-light);
+  --elevation-2-gradient: var(--elevation-2-gradient-light);
+  --elevation-2-inset-background-start: var(--elevation-2-inset-background-start-light);
+  --elevation-2-inset-background-end: var(--elevation-2-inset-background-end-light);
+  --elevation-2-inset-gradient: var(--elevation-2-inset-gradient-light);
+  --component-guide: var(--component-guide-light);
+  --alert: var(--alert-light);
+  --highlight-background: var(--highlight-background-light);
+  --highlight-text: var(--higlight-text-light);
+
+  /* Drop Shadows */
+  --elevation-1: var(--elevation-1-light);
+  --elevation-2: var(--elevation-2-light);
+  --elevation-3: var(--elevation-3-light);
+  --elevation-tooltip: var(--elevation-tooltip-light);
+  --elevation-accent: var(--elevation-accent-light);
+  --elevation-notification: var(--elevation-notification-light);
+
+  background-color: var(--main-background);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app {
+    /* Colorbook */
+    --main-background: var(--main-background-dark);
+    --component-background: var(--component-background-dark);
+    --high-contrast: var(--high-contrast-dark);
+    --medium-contrast: var(--medium-contrast-dark);
+    --elevation-1-background-start: var(--elevation-1-background-start-dark);
+    --elevation-1-background-end: var(--elevation-1-background-end-dark);
+    --elevation-1-gradient: var(--elevation-1-gradient-dark);
+    --elevation-2-background-start: var(--elevation-2-background-start-dark);
+    --elevation-2-background-end: var(--elevation-2-background-end-dark);
+    --elevation-2-gradient: var(--elevation-2-gradient-dark);
+    --elevation-2-inset-background-start: var(--elevation-2-inset-background-start-dark);
+    --elevation-2-inset-background-end: var(--elevation-2-inset-background-end-dark);
+    --elevation-2-inset-gradient: var(--elevation-2-inset-gradient-dark);
+    --component-guide: var(--component-guide-dark);
+    --alert: var(--alert-dark);
+    --highlight-background: var(--highlight-background-dark);
+    --highlight-text: var(--higlight-text-dark);
+
+    /* Drop Shadows */
+    --elevation-1: var(--elevation-1-dark);
+    --elevation-2: var(--elevation-2-dark);
+    --elevation-3: var(--elevation-3-dark);
+    --elevation-tooltip: var(--elevation-tooltip-dark);
+    --elevation-accent: var(--elevation-accent-dark);
+    --elevation-notification: var(--elevation-notification-dark);
+  }
 }
